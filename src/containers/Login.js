@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { login } from '../actions/auth';
 
 const Login = ({ login, isAuthenticated }) => {
+
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -26,6 +27,7 @@ const Login = ({ login, isAuthenticated }) => {
         <div className='container mt-5'>
             <h1>Sign In</h1>
             <p>Sign into your Account</p>
+            
             <form onSubmit={e => onSubmit(e)}>
                 <div className='form-group'>
                     <input 
