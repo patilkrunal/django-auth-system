@@ -2,9 +2,9 @@ import os
 from os import environ
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = '6$54+%%_#47^6gxy4wq9b8vk%hlmo0(i_je*+3re$)gqijhqxv'
+SECRET_KEY = 'secret key'
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -100,7 +100,7 @@ DJOSER = {
     'SET_PASSWORD_RETYPE': True,
     'USERNAME_RESET_CONFIRM_URL': 'email/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL': 'activate/{uid}/{token}',
-    'SEND_ACTIVATION_EMAIL': False,
+    'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS': {
         'user_create': 'accounts.serializers.UserCreateSerializer',
         'user': 'accounts.serializers.UserCreateSerializer',
@@ -113,8 +113,8 @@ AUTH_USER_MODEL = 'accounts.UserAccount'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'sureshmumbai2017@gmail.com'
-EMAIL_HOST_PASSWORD = 'njshvlhqfifmrbjf'
+EMAIL_HOST_USER = 'YOUR email'
+EMAIL_HOST_PASSWORD = 'one time password'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
